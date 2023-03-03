@@ -52,7 +52,7 @@ main {
   position: relative;
 }
 
-.box__wrapper {
+.card {
   position: relative;
 }
 
@@ -70,7 +70,7 @@ main {
   width: 100%;
 }
 
-.card {
+.card__inner {
   position: relative;
   display: flex;
   flex-direction: column;
