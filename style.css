@@ -72,7 +72,8 @@ main {
   position: relative;
   display: flex;
   flex-direction: column;
-  margin: 10rem 2rem 3rem;
+  margin: 10rem 2rem 1rem;
+  /* margin: 10rem 2rem 3rem; */
   border-radius: 20px;
   background: #fff;
   overflow: visible;
@@ -193,8 +194,9 @@ main {
 .attribution {
   font-size: 1.1rem;
   text-align: center;
+  color: #fff;
 }
 
 .attribution a {
-  color: #000;
+  color: #fff;
 }
