@@ -9,8 +9,7 @@ html {
   font-size: 62.5%;
 }
 
-h1,
-h2 {
+h1 {
   font-size: inherit;
   font-weight: inherit;
 }
@@ -62,12 +61,12 @@ main,
   display: flex;
 }
 
-.card__accordion h2,
+.card__accordion h1,
 .card__question {
   color: var(--darkblue);
 }
 
-.card__accordion h2,
+.card__accordion h1,
 .card__answer--active .card__question {
   font-weight: 700;
 }
@@ -82,7 +81,7 @@ main,
   color: #fff;
 }
 
-.card__accordion h2,
+.card__accordion h1,
 .attribution {
   text-align: center;
 }
@@ -141,7 +140,7 @@ main,
   padding: 0 2.5rem 4.2rem;
 }
 
-.card__accordion h2 {
+.card__accordion h1 {
   margin-bottom: 1rem;
   font-size: 3.4rem;
   text-transform: uppercase;
