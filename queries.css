@@ -7,20 +7,17 @@
 @media (min-width: 768px) {
   .card__inner {
     flex-direction: row;
-    /* margin: 0 8rem; */
     margin: 1rem 4rem;
     overflow: hidden;
   }
 
   .card__imagebox {
-    /* width: 49rem; */
     width: 48rem;
   }
 
   .card__image {
-    min-width: 32rem;
     max-width: 100%;
-    /* max-width: 49rem; */
+    min-width: 32rem;
     transform: translate(-8.5rem, -12.2rem);
   }
 
@@ -30,8 +27,8 @@
   }
 
   .card__accordion {
-    padding: 6.5rem 9.5rem 7rem 0;
     max-width: 41rem;
+    padding: 6.5rem 9.5rem 7rem 0;
   }
 
   .card__accordion h1 {
@@ -44,9 +41,9 @@
   }
 
   .card__answer {
-    line-height: 1.4rem;
-    font-size: 1.1rem;
     padding-right: 0.5rem;
+    font-size: 1.1rem;
+    line-height: 1.4rem;
   }
 
   .card__answer--active .card__answer {
