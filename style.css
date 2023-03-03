@@ -39,6 +39,8 @@ body {
   font-size: 1.2rem;
   font-family: "Kumbh Sans", sans-serif;
   background: linear-gradient(var(--softviolet), var(--softblue));
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 main {
