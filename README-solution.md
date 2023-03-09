@@ -58,6 +58,12 @@ Users should be able to:
 
     - Via an addEventListener whose function on click is to change the max-height.
 
+    - The max-height was calculated via JavaScript, by making the element's height equal to it's scroll height on trigger.
+
+  - How did I collapse the rest of the answers?
+
+    - I implemented a forEach statement inside my click addEventListener. The statement is a condition that removes the active class from all items, then sets the active class on the single element that was clicked.
+
   - How did I animate the reveal?
 
     - For the answer itself, two ways:
@@ -67,19 +73,15 @@ Users should be able to:
 
     - For the arrow, I rotated it via transform.
 
-  - How could I make this better?
-
-    - By letting JavaScript calculate the content each content's height.
-
 - Mobile layout:
 
-  - The height of the card was not explicitly declared. The height depended the accordion section which changes depending on the number of items opened.
+  - The height of the card was based on the mockup while the second question was opened. Getting that height from the chrome developer, I explicitly declared it as the card's height.
 
-  - The width was similarly dependent on the width of the device itself. A margin to the sides were added to make sure that the card doesn't touch the edges of the screen.
+  - The width was not explicitly set for the mobile version. A margin to the sides were added to make sure that the card doesn't touch the edges of the screen.
 
   - How did I position the illustrations:
 
-    - Nested in a picture tag, the images were absolutely positioned relative to a main image box.
+    - The two images were nested in an imagebox.
 
     - Each illustration was given a z-index lower/higher than the other, because they overlap.
 
@@ -89,41 +91,39 @@ Users should be able to:
 
 - Tablet/Desktop Layout
 
+  - Both the width and height are given set values.
+
   - How did I deal with the box overflowing the card while the rest of the illustrations didn't?
 
-    - I settled on having an outer and inner card section. Inside the outermost card, the box was a sibling to the inner card.
+    - The images of the mobile version were set to display: none, and instead the desktop illustrations were implemented as background-image within the imagebox.
+
+    - I learned that, for accessibility purposes, decorative illustratoins like these should be background-images anyway, to avoid search engines from scraping their content. That is, only the main content of the page should be gotten.
 
   - How did I make the layout responsive?
 
-    - Instead of just making the card smaller, I made the width expandable/collapsible.
+    - As the imagebox has no inline content, the width just collapses, until it reverts back to the mobile layout.
 
-      - The imagebox was given a width. The accordion was given a max-width.
+    - The two background-images' sizes were set through clamp. This makes the images shrink and expand depending on the viewport size.
 
-      - The main illustration was given a min-width and max-width. The latter was set to 100%. It then starts out small on tablet-sized devices before it gets big on desktop-sized ones.
-
-      - As all of its children are absolutely positioned, the imagebox's width collapses even without setting a min or max-width.
-
-      - The shadow illustration was left untouched because, on accident, I found that it becomes a nice background image for the accordion component on tablet-sized devices.
-
-      - Via opacity, the box was triggered to show only once the illustration has reached its max width.
-
-      - The box was intentionally left to move up and down according to how many questions were opened. I thought that looked cooler than if it was just static 😛
+    - Via opacity, the box was triggered to show only once the illustration has reached its max width.
 
 ### Continued development
 
-- It will be helpful if I did more accordion components, and absolutely positioned designs.
+- It will be helpful if I did more accordion components, and layouts involving background-images and absolutely-positioned elements.
 
-- I'd like to know how to automatically calculate each accordion item's max-height via JS, instead of doing it manually.
+- I definitely need more practice on using clamp.
 
-- I would like to try other methods to lay out the images. In making this, I had not thought about setting the woman illustration and its shadow as a background image. I know other people did that. I would like to know the advantages of that method.
-
-- I definitely need more practice on using max and min.
+- This is my most responsive project to date, and I want to take it further from here.
 
 ### Useful resources
 
 - [This video by Developer Empire](https://www.youtube.com/watch?v=4qnWreynXLU) which taught me how to make an accordion with basic transition animations!
 
 - [This article by Abdulqudus Abubakre](https://dev.to/ibn_abubakre/responsive-css-width-2jnm) which enlightened me more on how max-width works!
+
+- [This article by Mate Vegh](https://medium.com/mirum-budapest/back-to-the-basics-accordions-5aab4a678b3b) which described a quick way to get an accordion element's height via JS!
+
+- [This question answered by Dylan Hayes](https://stackoverflow.com/questions/16194737/apply-background-size-to-individual-layer-of-a-multiple-background) helped me understand how to use multiple images for background-image!
 
 ## Author
 
