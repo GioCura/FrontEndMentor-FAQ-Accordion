@@ -1,8 +1,8 @@
-/* @media (min-width: 1000px) {
+@media (min-width: 1000px) {
   html {
     font-size: 70%;
   }
-} */
+}
 
 @media (min-width: 1130px) {
   .card__box {
@@ -12,8 +12,8 @@
 
 @media (min-width: 768px) {
   .card {
-    max-height: 51.24rem;
     flex-direction: row;
+    height: 51.24rem;
     margin: 1rem 4rem;
     background-image: url(images/illustration-woman-online-desktop.svg),
       url(images/bg-pattern-desktop.svg);
@@ -26,22 +26,19 @@
     width: 48rem;
   }
 
-  .card__image {
-    display: none;
-  }
-
+  .card__image,
   .card__shadow {
     display: none;
   }
 
   .card__accordion {
-    padding: 6.5rem 9.5rem 8rem 0;
     max-width: 41rem;
+    padding: 6.5rem 9.5rem 8rem 0;
   }
 
   .card__accordion h1 {
-    text-align: initial;
     margin-bottom: 1.5rem;
+    text-align: initial;
   }
 
   .card__arrow {
@@ -49,13 +46,9 @@
   }
 
   .card__answer {
-    line-height: 1.4rem;
-    font-size: 1.1rem;
     padding-right: 0.5rem;
-  }
-
-  .card__answer--active .card__answer {
-    max-height: 4.3rem;
+    font-size: 1.1rem;
+    line-height: 1.4rem;
   }
 }
 
